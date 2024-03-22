@@ -1,0 +1,436 @@
+/* *****************************************************************
+VARS
+***************************************************************** */
+
+:root {
+	--color-one: #222833;
+	--color-two: #EEEEEE;
+	--color-three: #6E07F3;
+	/* --color-four: white; */
+    --color-primary: rgb(201, 65, 255);
+    --color-secondary: rgb(109, 189, 255);
+}
+
+
+/* *****************************************************************
+TOOLS
+***************************************************************** */
+
+* {
+	box-sizing: border-box;
+}
+
+/* 1rem = 10px */
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: "REM", sans-serif;
+	font-size: 1.8rem;
+	background-color: var(--color-one);
+    margin: auto;
+}
+
+ol,
+ul,
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: var(--color-two);
+}
+
+h1 {
+    margin: 5rem 0 5rem 0;
+    font-size: 3.5rem;
+	text-align: center;
+	color: var(--color-two);
+}
+
+h2,
+h3,
+h4 {
+    margin: 4rem 0 4rem 0;
+    font-size: 2rem;
+	text-align: center;
+	color: var(--color-two);
+}
+
+p,
+label,
+legend {
+    font-size: 1.5rem;
+	color: var(--color-two);
+}
+
+
+strong {
+    color: var(--color-one);
+}
+
+@media screen and (min-width: 480px) {
+	
+}
+
+@media screen and (min-width: 960px) {
+    
+    h1,
+    h2,
+    h3 {
+        font-size: 4.5rem;
+    }
+
+    h4 {
+        font-size: 2.5rem;
+    }
+
+    p,
+    label,
+    legend {
+        font-size: 2rem;
+    }
+    
+}
+
+/* *****************************************************************
+GENERALITIES
+***************************************************************** */
+
+button,
+.button {
+    background-color: transparent;
+    border: 0.2rem solid var(--color-secondary);
+    border-radius: 3rem;
+    color: var(--color-secondary);
+    padding: 1.1rem;
+}
+
+button:hover,
+.button:hover {
+	cursor: pointer;
+	background: linear-gradient(-45deg, var(--color-primary), var(--color-secondary));
+    border: linear-gradient(-45deg, var(--color-primary), var(--color-secondary));
+    color: var(--color-two);
+    /* transition-duration: .1s; */
+}
+
+
+span {
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(-45deg, var(--color-primary), var(--color-secondary));
+}
+
+.gradient {
+    /* width: 100%; */
+    background: linear-gradient(-45deg, var(--color-primary), var(--color-secondary));
+}
+
+.container {
+    text-align: center;
+    margin: 1rem;
+    padding: 1rem 2rem 2rem 2rem;
+}
+
+@media screen and (min-width: 480px) {
+	
+}
+
+@media screen and (min-width: 960px) {
+
+    
+}
+
+/* *****************************************************************
+HEADER
+***************************************************************** */
+
+header {
+    max-width: 90%;
+    margin: 3rem 4rem 2rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul{
+    margin: 0;
+    display: flex;
+    gap: 2.5rem;
+}
+
+.img-id {
+    border-style: none;
+    max-width: 20%;
+    border-radius: 50%;
+    display: block;
+}
+
+@media screen and (min-width: 480px) {
+	
+    .img-id {
+        max-width: 10%;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    
+    header {
+        width: 70%;
+        margin: 3rem auto 0 auto;
+    }
+
+    .img-id {
+        max-width: 6%;
+    }
+    
+}
+
+/* *****************************************************************
+MAIN
+***************************************************************** */
+
+.img-background {
+    max-width: 60%;
+    margin: auto;
+    display: block;
+}
+
+.img-article {
+    max-width: 7.5em;
+    border-radius: 5%;
+}
+
+.img-projet {
+    max-width: 100%;
+}
+
+article {
+    background-color: var(--color-one);
+    margin: 2.5rem;
+    padding: 2.5rem;
+    border-radius: 1rem;
+}
+
+.card {
+    position: relative;
+}
+
+/* ribbon = ruban like promotion */
+.ribbon {
+    position: absolute;
+    top: 1.3rem;
+    right: -6.3rem;
+    width: 18.5rem;
+    height: 3.2rem;
+    background-color: #ff6347;
+    transform: rotate(45deg);
+    overflow: hidden;
+    border-radius: 10rem 10rem 0.5rem 0.5rem;
+}
+
+.ribbon span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    /* font-weight: bold; */
+    white-space: nowrap;
+}
+
+@media screen and (min-width: 480px) {
+	
+    .img-projet {
+        max-width: 45%;
+    }
+}
+
+@media screen and (min-width: 960px) {
+
+    article {
+        margin: 2rem;
+        padding: 2rem;
+    }
+
+    .ribbon {
+        top: 1.8rem;
+        right: -5.8rem;
+    }
+    
+    .img-background {
+        max-width: 40%;
+    }
+
+    .img-projet {
+        max-width: 35%;
+    }
+    
+    .container {
+        width: 70%;
+        margin: 0rem auto 0rem auto;
+        padding-top: 4rem;
+    }
+
+    .cards {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .card {
+        min-width: 30%;
+        height: fit-content;
+    }
+
+}
+
+/* *****************************************************************
+CONTACT
+***************************************************************** */
+
+
+.input-field .item,
+.input-field .phone,
+.textarea-fied .item {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.field .error-txt {
+    font-size: 1.5rem; 
+    color: red;
+    text-align: left;
+    margin: -1.5rem 0 1rem 0;
+}
+
+.field .error-txt {
+    display: none;
+}
+
+.field.error .item {
+    border-color: red;
+}
+
+.field.error .error-txt {
+    display: block;
+}
+
+@media screen and (min-width: 480px) {
+	
+    .input-box {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .field {
+        min-width: 48%;
+    }
+
+    input {
+        height: 3rem;
+    }
+}
+
+@media screen and (min-width: 960px) {
+
+    input {
+        height: 5rem;
+    }
+    
+}
+
+
+/* *****************************************************************
+POPUP
+***************************************************************** */
+
+.learnMore:hover {
+    background-image: linear-gradient(-45deg, var(--color-primary), var(--color-secondary));
+    background-clip: text;
+    color: transparent;
+    cursor: pointer;
+}
+
+.learnMore {
+    margin-top: 0;
+    font-style: italic;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+  
+.popup-content {
+    background-color: var(--color-one);
+    margin: 15% auto;
+    padding: 2rem;
+    border: 0.1rem solid #888;
+    width: 80%;
+}
+  
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: var(--color-two);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 480px) {
+	
+}
+
+@media screen and (min-width: 960px) {
+    
+    .learnMore {
+        font-size: 1.7rem;
+    }
+}
+
+
+/* *****************************************************************
+FOOTER
+***************************************************************** */
+
+footer {
+    background-color: black;
+    margin: 0;
+    text-align: center;
+}
+
+footer section {
+    padding: 2rem;
+}
+
+.icons{
+    margin: 0;
+    font-size: 2rem;
+}
+
+
+@media screen and (min-width: 480px) {
+	
+}
+
+@media screen and (min-width: 960px) {
+    
+    
+}
