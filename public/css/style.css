@@ -420,9 +420,29 @@ footer section {
     padding: 2rem;
 }
 
+.icon {
+    display: flex;
+    justify-content: center;
+}
+
 .icons{
     margin: 0;
-    font-size: 2rem;
+    font-size: 3rem;
+    padding: 0 2rem 0 2rem;
+}
+
+.mail:hover {
+    color: #27A2E3;
+}
+
+.linkedin:hover {
+    color: #0A66C2;
+}
+
+.github:hover {
+    color: #000000;
+    background: #EEEEEE;
+    border-radius: 2rem;
 }
 
 
