@@ -1,14 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    var contactButton = document.querySelector(".button");
+  var navLinks = document.querySelectorAll(".nav-link");
 
-    contactButton.addEventListener("click", function(event) {
+  navLinks.forEach(function(link) {
 
-      event.preventDefault();
+      link.addEventListener("click", function(event) {
 
-      var targetSection = document.querySelector(event.target.getAttribute("href"));
-      targetSection.scrollIntoView({ behavior: 'smooth' });
-
-    });
-    
+          event.preventDefault();
+          
+          var targetSection = document.querySelector(link.getAttribute("href"));
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+      });
   });
+});

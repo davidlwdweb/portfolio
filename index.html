@@ -21,12 +21,20 @@
 
 <body>
     <header>
-        <img class="img-id" src="public/img/id.png" alt="image me représentant">
-        <nav>
-            <ul>
-                <!-- <li><a href="">CV</a></li> -->
-                <li><a class="button" href="#contact">Contact</a></li>
+        <nav class="navbar">
+            <a class="nav-branding" href="#"><img class="img-id" src="public/img/id.png" alt="image me représentant"></a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a class="nav-link nav-hover" href="#profil">Profil</a></li>
+                <li class="nav-item"><a class="nav-link nav-hover" href="#competences">Compétences</a></li>
+                <li class="nav-item"><a class="nav-link nav-hover" href="#formation">Formation</a></li>
+                <li class="nav-item"><a class="nav-link nav-hover" href="#projet">Projet</a></li>
+                <li class="nav-item"><a class="button nav-link" href="#contact">Contact</a></li>
             </ul>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
         </nav>
     </header>
 
@@ -35,19 +43,48 @@
         <section>
             <div class="container">
                 <h1 data-aos="fade-right" data-aos-duration="1000"><span>David</span> | Développeur web full stack</h1>
-                <p data-aos="fade-left" data-aos-duration="1000">Je suis à la recherche d'une entreprise pour effectuer mon <span>alternance</span> en tant que <span>&quot;Concepteur développeur full-stack en alternance&quot;</span></p>
+                <p data-aos="fade-left" data-aos-duration="1000">Actuellement, je suis à la recherche d'une <span>entreprise</span> pour effectuer mon <span>alternance</span> en tant que <span>&quot;Concepteur Développeur Full-Stack&quot;</span>, une opportunité idéale pour approfondir mes connaissances dans ce domaine.</p>
             </div>
             <img data-aos="zoom-in" data-aos-duration="1000" class="img-background" src="public/img/background_img.png" alt="dessins d'un d'un programmeur">
         </section>
 
-        <section class="gradient">
+        <section class="gradient" id="profil">
+            <div data-aos="zoom-in" data-aos-duration="1000" class="container about">
+                <h3>A PROPOS DE MOI</h3>
+
+                <img class="img-about" src="public/img/id.png" alt="image me représentant">
+
+                <p>Enchanter, je m'appelle David, j'ai 28ans. Ravi de vous rencontrer.</p>
+                <p>Anciennement Flowleader au sein du group RENAULT, l'objectif était de superviser l'activité du magasin accueillant 300 collaborateurs, les anomalies, le contact avec les chargés d'affaire et le service informatique L2 & L3.</p>
+                <p>Attiré depuis de nombreuses années par le domaine du Développement Web, j'ai finalement saisi une opportunité pour effectuer une reconversion professionnelle dans ce domaine qui m'a toujours passionné.</p>
+                <p>J'ai achevé ma formation de développeur full stack à la <strong>3W Academy</strong>, où j'ai acquis des compétences en HTML, CSS, JavaScript, PHP, SQL et Bootstrap.</p>
+                <p>Je souhaite approfondir mes connaissances, et quoi de plus logique que de poursuivre avec une alternance en tant que <strong>&quot;Concepteur Développeur Web Full Stack&quot;</strong>, une opportunité idéale pour approfondir mes compétences dans ce domaine.</p>
+            </div>
+
+        </section>
+
+        <section data-aos="fade-right" data-aos-duration="1000" id="competences">
             <div class="container">
+                <h3>COMPÉTENCES</h3>
+                <div class="skills">
+                    <img class="img-logo" src="public/img/HTML5_logo.png" alt="HTML5_logo">
+                    <img class="img-logo" src="public/img/CSS3_logo.png" alt="CSS3_logo">
+                    <img class="img-logo" src="public/img/javascript_logo.png" alt="javascript_logo">
+                    <img class="img-logo" src="public/img/PHP_logo.png" alt="PHP_logo">
+                    <img class="img-logo" src="public/img/MySQL_logo.png" alt="MySQL_logo">
+                    <img class="img-logo" src="public/img/Jira_Logo.png" alt="Jira_Logo">
+                    <img class="img-logo" src="public/img/Bootstrap_logo.png" alt="Bootstrap_logo">
+                    <img class="img-logo border" src="public/img/logo_manhattan-1.jpg" alt="manhattan-associates-logo">
+                </div>
+            </div>
 
-                <h3 data-aos="fade-right" data-aos-duration="500">Enchanter, je m'appelle David, j'ai 28ans et je cherche une alternance. Ravi de vous rencontrer.</h3>
+        </section>
 
-                <p data-aos="zoom-in" data-aos-duration="500">J'ai achevé ma formation de développeur full stack à la <strong>3W Academy</strong>, où j'ai acquis des compétences en HTML, CSS, JavaScript, PHP, SQL et Bootstrap.</p>
+        <section class="gradient">
+            <div class="container" id="formation">
 
-                <p data-aos="zoom-in" data-aos-duration="500">Actuellement, je suis à la recherche d'une opportunité d'approfondir mes connaissances, et quoi de mieux qu'une alternance en tant que <strong>&quot;Concepteur Développeur Full-Stack&quot;</strong> pour poursuivre dans cette voie !</p>
+                <h3 data-aos="fade-right" data-aos-duration="500">FORMATION</h3>
+
             </div>
 
             <div class="container cards">
@@ -108,7 +145,7 @@
         </section>
 
         <section class="gradient">
-            <div class="container">
+            <div class="container" id="projet">
                 <h3 data-aos="fade-right" data-aos-duration="500">Projet</h3>
                 <article data-aos="zoom-in-up" data-aos-duration="1000" class="article-project">
                     <a href="https://davidlouward.sites.3wa.io/projet-vaporia/vaporia/index.php?page=home" target="_blank"><img class="img-projet overlay" src="public/img/vaporia-1.png" alt="projet Vaporia"></a>
@@ -183,12 +220,13 @@
     </footer>
 
     
-    <!-- <script type="text/javascript" src="public/js/darkMode.js"></script> -->
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="public/js/contact.js"></script>
+    <script src="public/js/burger.js"></script>
     <script src="public/js/smooth.js"></script>
     <script src="public/js/more.js"></script>
+    
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
