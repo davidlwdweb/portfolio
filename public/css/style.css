@@ -204,7 +204,7 @@ header nav ul{
 
 .bar {
     display: block;
-    width: 22.5rem;
+    width: 2.5rem;
     height: 0.3rem;
     margin: 0.5rem;
     transition: all 0.3s ease-in-out;
@@ -353,8 +353,27 @@ article {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    /* font-weight: bold; */
     white-space: nowrap;
+}
+
+.infobulle {
+    position: relative;  /* les .infobulle deviennent référents */
+    cursor: help;
+}
+
+.infobulle:hover::after,
+.infobulle:focus::after {
+  content: attr(aria-label);
+  position: absolute;
+  top: -2.5em;
+  padding: 0.8rem;
+  color: #EEEEEE;
+  background-color: #222833;
+  border-radius: 1rem;
+  font-size: 1rem;
+  transform: translateX(-50%);
+  z-index: 1;
+  white-space: nowrap;
 }
 
 @media screen and (min-width: 480px) {
@@ -382,6 +401,11 @@ article {
     .about p {
         text-align: justify;
     }
+
+    .infobulle:hover::after,
+    .infobulle:focus::after {
+        font-size: 1.3rem;
+}
 }
 
 @media screen and (min-width: 960px) {
@@ -574,6 +598,22 @@ footer section {
     margin: 0;
     font-size: 3rem;
     padding: 0 2rem 0 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.icons a {
+    position: relative;
+}
+
+.icons span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: var(--color-one);
+    font-size: 2rem;
 }
 
 .mail:hover {
