@@ -262,6 +262,7 @@ header nav ul{
     header {
         width: 70%;
         margin: 3rem auto 0 auto;
+        display: block;
     }
 
     .img-id {
@@ -438,7 +439,7 @@ article {
     .infobulle:hover::after,
     .infobulle:focus::after {
         font-size: 1.3rem;
-}
+    }
 }
 
 @media screen and (min-width: 960px) {
@@ -491,6 +492,12 @@ article {
 
     .img-about {
         max-width: 30%;
+    }
+
+    #profil::after {
+        content: "";
+        display: table;
+        clear: both;
     }
 
 }
